@@ -3,27 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55155153258676D30013CAB3 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55155152258676D30013CAB3 /* StorageManager.swift */; };
+		551DFFF925813E7200970E73 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551DFFF825813E7200970E73 /* Word.swift */; };
+		55574D0E258943010002D94C /* ChoiceLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55574D0D258943010002D94C /* ChoiceLessonViewController.swift */; };
 		5570D6ED257980C600DC47C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570D6EC257980C600DC47C3 /* AppDelegate.swift */; };
 		5570D6EF257980C600DC47C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570D6EE257980C600DC47C3 /* SceneDelegate.swift */; };
-		5570D6F1257980C600DC47C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570D6F0257980C600DC47C3 /* ViewController.swift */; };
+		5570D6F1257980C600DC47C3 /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570D6F0257980C600DC47C3 /* WordViewController.swift */; };
 		5570D6F4257980C600DC47C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5570D6F2257980C600DC47C3 /* Main.storyboard */; };
 		5570D6F6257980C900DC47C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5570D6F5257980C900DC47C3 /* Assets.xcassets */; };
 		5570D6F9257980C900DC47C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5570D6F7257980C900DC47C3 /* LaunchScreen.storyboard */; };
+		8418B9181A53CCA403E35BCC /* Pods_MemorizingWords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF58E3D5C42EDEDE46E84AA /* Pods_MemorizingWords.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55155152258676D30013CAB3 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		551DFFF825813E7200970E73 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		55574D0D258943010002D94C /* ChoiceLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceLessonViewController.swift; sourceTree = "<group>"; };
 		5570D6E9257980C600DC47C3 /* MemorizingWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemorizingWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5570D6EC257980C600DC47C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5570D6EE257980C600DC47C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5570D6F0257980C600DC47C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5570D6F0257980C600DC47C3 /* WordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
 		5570D6F3257980C600DC47C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5570D6F5257980C900DC47C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5570D6F8257980C900DC47C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5570D6FA257980C900DC47C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CF58E3D5C42EDEDE46E84AA /* Pods_MemorizingWords.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemorizingWords.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EE4E1D888AB8D283851A190 /* Pods-MemorizingWords.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemorizingWords.release.xcconfig"; path = "Target Support Files/Pods-MemorizingWords/Pods-MemorizingWords.release.xcconfig"; sourceTree = "<group>"; };
+		927A5D8B7D90B2FCF09173BF /* Pods-MemorizingWords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemorizingWords.debug.xcconfig"; path = "Target Support Files/Pods-MemorizingWords/Pods-MemorizingWords.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8418B9181A53CCA403E35BCC /* Pods_MemorizingWords.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3851B72381106D4A87D4CCFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6CF58E3D5C42EDEDE46E84AA /* Pods_MemorizingWords.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5570D6E0257980C600DC47C3 = {
 			isa = PBXGroup;
 			children = (
 				5570D6EB257980C600DC47C3 /* MemorizingWords */,
 				5570D6EA257980C600DC47C3 /* Products */,
+				D1CA504762B7E0FF19427D56 /* Pods */,
+				3851B72381106D4A87D4CCFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +79,25 @@
 			children = (
 				5570D6EC257980C600DC47C3 /* AppDelegate.swift */,
 				5570D6EE257980C600DC47C3 /* SceneDelegate.swift */,
-				5570D6F0257980C600DC47C3 /* ViewController.swift */,
+				551DFFF825813E7200970E73 /* Word.swift */,
+				55155152258676D30013CAB3 /* StorageManager.swift */,
+				5570D6F0257980C600DC47C3 /* WordViewController.swift */,
+				55574D0D258943010002D94C /* ChoiceLessonViewController.swift */,
 				5570D6F2257980C600DC47C3 /* Main.storyboard */,
 				5570D6F5257980C900DC47C3 /* Assets.xcassets */,
 				5570D6F7257980C900DC47C3 /* LaunchScreen.storyboard */,
 				5570D6FA257980C900DC47C3 /* Info.plist */,
 			);
 			path = MemorizingWords;
+			sourceTree = "<group>";
+		};
+		D1CA504762B7E0FF19427D56 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				927A5D8B7D90B2FCF09173BF /* Pods-MemorizingWords.debug.xcconfig */,
+				6EE4E1D888AB8D283851A190 /* Pods-MemorizingWords.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5570D6FD257980C900DC47C3 /* Build configuration list for PBXNativeTarget "MemorizingWords" */;
 			buildPhases = (
+				F4B56BB20C1B8A1D1FEE1E81 /* [CP] Check Pods Manifest.lock */,
 				5570D6E5257980C600DC47C3 /* Sources */,
 				5570D6E6257980C600DC47C3 /* Frameworks */,
 				5570D6E7257980C600DC47C3 /* Resources */,
+				72A62FD7E22893F201082137 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,13 +168,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		72A62FD7E22893F201082137 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MemorizingWords/Pods-MemorizingWords-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MemorizingWords/Pods-MemorizingWords-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MemorizingWords/Pods-MemorizingWords-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4B56BB20C1B8A1D1FEE1E81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MemorizingWords-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5570D6E5257980C600DC47C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5570D6F1257980C600DC47C3 /* ViewController.swift in Sources */,
+				551DFFF925813E7200970E73 /* Word.swift in Sources */,
+				5570D6F1257980C600DC47C3 /* WordViewController.swift in Sources */,
+				55155153258676D30013CAB3 /* StorageManager.swift in Sources */,
 				5570D6ED257980C600DC47C3 /* AppDelegate.swift in Sources */,
+				55574D0E258943010002D94C /* ChoiceLessonViewController.swift in Sources */,
 				5570D6EF257980C600DC47C3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,11 +362,13 @@
 		};
 		5570D6FE257980C900DC47C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 927A5D8B7D90B2FCF09173BF /* Pods-MemorizingWords.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8BMP8HX9Y5;
 				INFOPLIST_FILE = MemorizingWords/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +382,13 @@
 		};
 		5570D6FF257980C900DC47C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EE4E1D888AB8D283851A190 /* Pods-MemorizingWords.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8BMP8HX9Y5;
 				INFOPLIST_FILE = MemorizingWords/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
