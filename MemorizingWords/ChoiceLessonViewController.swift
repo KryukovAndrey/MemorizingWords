@@ -21,6 +21,7 @@ class ChoiceLessonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
         topics = StorageManager.shared.realm.objects(Topic.self)
     }
     
@@ -54,7 +55,7 @@ extension ChoiceLessonViewController: UIPickerViewDelegate, UIPickerViewDataSour
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
         if pickerView == topicPickerView {
-            return 2 //topics.count
+            return topics.count
         }
         if pickerView == lessonPickerView{
             return topics[topicPV].lessons.count
