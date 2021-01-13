@@ -26,7 +26,8 @@ class WordViewController: UIViewController {
         
         topics = StorageManager.shared.realm.objects(Topic.self)
         title = topics[topicPV].lessons[lessonPV].lesson
-        
+//        print ("topicPV = \(topicPV)")
+//        print ("lessonPV = \(lessonPV)")
         showWord()
         timer()
     }
@@ -46,7 +47,7 @@ class WordViewController: UIViewController {
     
     @objc func changeNumberOfWords(){
         numberOfWords += 1
-        if numberOfWords == topics[topicPV].lessons[lessonPV].words.count{
+        if numberOfWords == topics[topicPV].lessons[lessonPV].words.count {
             numberOfWords = 0
         }
         showWord()

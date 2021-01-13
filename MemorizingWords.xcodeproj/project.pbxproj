@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		55155153258676D30013CAB3 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55155152258676D30013CAB3 /* StorageManager.swift */; };
 		551DFFF925813E7200970E73 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551DFFF825813E7200970E73 /* Word.swift */; };
+		55215607259BA6CC007788DB /* DetailLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55215606259BA6CC007788DB /* DetailLessonViewController.swift */; };
 		55574D0E258943010002D94C /* ChoiceLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55574D0D258943010002D94C /* ChoiceLessonViewController.swift */; };
+		5560934325ACDE860020B0C6 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5560934225ACDE860020B0C6 /* AlertController.swift */; };
 		5570D6ED257980C600DC47C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570D6EC257980C600DC47C3 /* AppDelegate.swift */; };
 		5570D6EF257980C600DC47C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570D6EE257980C600DC47C3 /* SceneDelegate.swift */; };
 		5570D6F1257980C600DC47C3 /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570D6F0257980C600DC47C3 /* WordViewController.swift */; };
@@ -23,7 +25,9 @@
 		02F06CCC5AC9DBF1DCDB02FE /* Pods-MemorizingWords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemorizingWords.debug.xcconfig"; path = "Target Support Files/Pods-MemorizingWords/Pods-MemorizingWords.debug.xcconfig"; sourceTree = "<group>"; };
 		55155152258676D30013CAB3 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		551DFFF825813E7200970E73 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		55215606259BA6CC007788DB /* DetailLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLessonViewController.swift; sourceTree = "<group>"; };
 		55574D0D258943010002D94C /* ChoiceLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceLessonViewController.swift; sourceTree = "<group>"; };
+		5560934225ACDE860020B0C6 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		5570D6E9257980C600DC47C3 /* MemorizingWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemorizingWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5570D6EC257980C600DC47C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5570D6EE257980C600DC47C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,10 +60,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		55215609259BA856007788DB /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5570D6F5257980C900DC47C3 /* Assets.xcassets */,
+				5570D6F7257980C900DC47C3 /* LaunchScreen.storyboard */,
+				5570D6EC257980C600DC47C3 /* AppDelegate.swift */,
+				5570D6EE257980C600DC47C3 /* SceneDelegate.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		5570D6E0257980C600DC47C3 = {
 			isa = PBXGroup;
 			children = (
 				5570D6EB257980C600DC47C3 /* MemorizingWords */,
+				55215609259BA856007788DB /* Other */,
 				5570D6EA257980C600DC47C3 /* Products */,
 				D1CA504762B7E0FF19427D56 /* Pods */,
 				289606CC6A414170A74531E6 /* Frameworks */,
@@ -77,15 +93,13 @@
 		5570D6EB257980C600DC47C3 /* MemorizingWords */ = {
 			isa = PBXGroup;
 			children = (
-				5570D6EC257980C600DC47C3 /* AppDelegate.swift */,
-				5570D6EE257980C600DC47C3 /* SceneDelegate.swift */,
 				551DFFF825813E7200970E73 /* Word.swift */,
 				55155152258676D30013CAB3 /* StorageManager.swift */,
-				5570D6F0257980C600DC47C3 /* WordViewController.swift */,
+				5560934225ACDE860020B0C6 /* AlertController.swift */,
 				55574D0D258943010002D94C /* ChoiceLessonViewController.swift */,
+				55215606259BA6CC007788DB /* DetailLessonViewController.swift */,
+				5570D6F0257980C600DC47C3 /* WordViewController.swift */,
 				5570D6F2257980C600DC47C3 /* Main.storyboard */,
-				5570D6F5257980C900DC47C3 /* Assets.xcassets */,
-				5570D6F7257980C900DC47C3 /* LaunchScreen.storyboard */,
 				5570D6FA257980C900DC47C3 /* Info.plist */,
 			);
 			path = MemorizingWords;
@@ -219,8 +233,10 @@
 				5570D6F1257980C600DC47C3 /* WordViewController.swift in Sources */,
 				55155153258676D30013CAB3 /* StorageManager.swift in Sources */,
 				5570D6ED257980C600DC47C3 /* AppDelegate.swift in Sources */,
+				5560934325ACDE860020B0C6 /* AlertController.swift in Sources */,
 				55574D0E258943010002D94C /* ChoiceLessonViewController.swift in Sources */,
 				5570D6EF257980C600DC47C3 /* SceneDelegate.swift in Sources */,
+				55215607259BA6CC007788DB /* DetailLessonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

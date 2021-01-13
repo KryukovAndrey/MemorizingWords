@@ -25,15 +25,51 @@ class ChoiceLessonViewController: UIViewController {
         topics = StorageManager.shared.realm.objects(Topic.self)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.topicPickerView.reloadAllComponents()
+    }
+    
+    @IBAction func showTgeWords(_ sender: Any) {
+    }
     @IBAction func startToShowWords(_ sender: Any) {
+    }
+    @IBAction func newTopicAction(_ sender: UIButton) {
+        showAlert()
+    }
+    @IBAction func editTopicAction(_ sender: UIButton) {
+        showAlert(with: topics[topicPV]) {
+            self.topicPickerView.reloadAllComponents()
+        }
+    }
+    @IBAction func deleteTopicAction(_ sender: UIButton) {
+        StorageManager.shared.delete(topic: topics[topicPV])
+//        DispatchQueue.main.async {
+//            self.topicPickerView.reloadAllComponents  ()
+//        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "segue" else { return }
-        guard let destination = segue.destination as? WordViewController else { return }
-        destination.topicPV = topicPV
-        destination.lessonPV = lessonPV
+        
+        switch segue.identifier {
+        case "segue":
+            guard let destination = segue.destination as? WordViewController else { return }
+            destination.topicPV = topicPV
+            destination.lessonPV = lessonPV
+            print ("destination.topicPV = \(topicPV)")
+            print ("destination.lessonPV = \(lessonPV)")
+        case "segueDetailLesson":
+            guard let destinationDetailLessonVC = segue.destination as? DetailLessonViewController else { return }
+            destinationDetailLessonVC.topicPV = topicPV
+            destinationDetailLessonVC.lessonPV = lessonPV
+            print ("destinationDetailLessonVC.topicPV = \(topicPV)")
+            print ("destinationDetailLessonVC.lessonPV = \(lessonPV)")
+        default:
+            print("Не сработало")
+        }
     }
+    
+    
     
 }
 
@@ -46,6 +82,8 @@ extension ChoiceLessonViewController: UIPickerViewDelegate, UIPickerViewDataSour
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         if pickerView == topicPickerView {
             topicPV = row
+            print(topicPV)
+            print(topics[topicPV].topic)
             self.lessonPickerView.reloadAllComponents();
         } else if pickerView == lessonPickerView{
             lessonPV = row
@@ -76,3 +114,29 @@ extension ChoiceLessonViewController: UIPickerViewDelegate, UIPickerViewDataSour
         }
     }
 }
+
+extension ChoiceLessonViewController {
+    
+    private func showAlert(with topic: Topic? = nil, completion: (() -> Void)? = nil) {
+        
+        let title = topic != nil ? "Измените тему" : "Добавьте тему"
+        
+        let alert = AlertController(title: title, message: "Please insert new value", preferredStyle: .alert)
+        
+        alert.action(with: topic) { newValue in
+            if let topic = topic, let completion = completion {
+                StorageManager.shared.edit(topic: topic, newValue: newValue)
+                completion()
+            } else {
+                let newTopic = Topic()
+                newTopic.topic = newValue
+                
+                StorageManager.shared.save(topic: newTopic)
+                self.topicPickerView.reloadAllComponents()
+            }
+        }
+        
+        present(alert, animated: true)
+    }
+}
+
